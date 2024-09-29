@@ -49,10 +49,10 @@ function AdminDashboard() {
   }, [selectedWebinar]); // Refetch participants when webinar changes
 
   // Handle Paid/Unpaid toggle
-  const togglePayment = async (id, paid) => {
+  const togglePayment = async (id, payment_status) => {
     const { error } = await supabase
       .from('participants')
-      .update({ paid: !paid })
+      .update({ payment_status: !payment_status })
       .eq('id', id);
 
     if (error) {
@@ -194,9 +194,9 @@ function AdminDashboard() {
                     <td>{row.offlineonline}</td>
                     <td>
                       <button 
-                        className={row.paid ? styles.paid : styles.unpaid}
+                        className={row.payment_status ? styles.paid : styles.unpaid}
                         onClick={() => togglePayment(row.id, row.paid)}>
-                        {row.paid ? 'Already Paid' : 'Unpaid'}
+                        {row.payment_status ? 'Already Paid' : 'Unpaid'}
                       </button>
                     </td>
                     <td>

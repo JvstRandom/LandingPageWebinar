@@ -444,13 +444,14 @@
 
 .content .detail h2 {
   color: var(--text-color);
-  font-size: 1.6em;
+  margin-bottom: -5px;
+  font-size: 40px;
   font-weight: bolder;
-  
 }
 
-.content .detail h2 span {
-  font-size: 0.7em;
+.content .detail .jabatan {
+  font-size: 22px;
+  margin-bottom: 50px;
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -469,9 +470,11 @@
 
 .sci {
   position: relative;
+  background-color: #fff;
+  height: 30px;
   display: flex;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   justify-content: center;
   align-content: center;
 }

@@ -167,30 +167,31 @@ function LandingPage() {
                         </div> */}
 
                         {webinar.nama_pemateri.map((name, index) => (
-                                <div className={styles.t4InfoPemateri}>
-                                    <div className={styles.cardcon}>
-                                    <div key={index} className={styles.card}>
-                                        <div className={styles.img_bx}>
-                                        <img src={webinar.foto_pemateri_url[index]} alt={name} />    
-                                        </div>
-                                        <div className={styles.content}>
-                                            <div className={styles.detail}>
+                                <div className={styles.cardcon}>
+                                <div key={index} className={styles.card}>
+                                    <div className={styles.img_bx}>
+                                    <img src={webinar.foto_pemateri_url[index]} alt={name} />    
+                                    </div>
+                                    <div className={styles.content}>
+                                        <div className={styles.detail}>
                                             <h2>{name}</h2>
-                                            <span>{webinar.jabat_pemateri[index]}</span>
-                                            </div>
+                                            <span className={styles.jabatan}>{webinar.jabat_pemateri[index]}</span>
                                         </div>
                                     </div>
-                                    </div>
-                                    <div className={styles.kataPemateri}>
-                                        <img src={webinar.quote_pemateri_url} alt="img" />
-                                    </div>
+                                </div>
                                 </div>
                             ))}
 
-                        <div className={styles.kataPemateri}>
+                        {webinar.nama_pemateri.map((name,index) => (
+                            <div className={styles.kataPemateri}>
+                                <img src={webinar.quote_pemateri_url[index]} alt="img" />
+                            </div>
+                        ))}
+
+                        {/* <div className={styles.kataPemateri}>
                             <img src={katapemateri1} alt="img" />
                             <img src={katapemateri2} alt="img" />
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* INFO TAMBAHAN PART */}
