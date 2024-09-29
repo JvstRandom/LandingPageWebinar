@@ -18,7 +18,7 @@ function AdminDashboard() {
 
   // Fetch participants from Supabase
   const fetchParticipants = async () => {
-    let query = supabase.from('participants').select('*');
+    let query = supabase.from('participants').select('*').order('id', { ascending: false });
   
     if (selectedWebinar) {
       query = query.eq('webinar_id', selectedWebinar);
