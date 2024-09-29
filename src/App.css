@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'JudsonBold';
+  src: url('./fonts/Judson-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JudsonReg';
+  src: url('./fonts/Judson-Regular.ttf') format('truetype');
+}

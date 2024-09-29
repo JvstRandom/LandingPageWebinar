@@ -1,0 +1,561 @@
+:root {
+  /* 85CDDF */
+  /* 659FAF */
+    --primary-color: #85CDDF;      /* Blue */
+    --secondary-color: #E1D9C1;    /* Krem */
+    --green-color: #2ecc71;
+    --red-color: #e74c3c;       /* Red */
+    --yellow-color: #EDD04B;
+    --white-color: #f4f4f4;   /* Light Grey */
+    --text-color: #333333;         /* Dark Grey */
+  }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-image: url('../gambar/bg.png');
+  background-size: contain;
+  background-repeat: no-repeat; */
+  background-color: var(--white-color);
+  /* margin: 25px 50px; */
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img{
+  width: 250px;
+  margin-top: 30px;
+}
+
+.t4logo{
+  padding: 7px 14px;
+  border: 4px, solid, var(--primary-color);
+  border-radius: 5vw;
+  font-family: 'JudsonBold';
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: max-content;
+  color: var(--text-color);
+}
+
+.jdlWebinar{
+  font-family: 'JudsonBold';
+  font-size: 55px;
+  margin-bottom: 15px;
+  color: var(--yellow-color);
+  text-shadow: 10px 9px 90x rgba(0, 0, 0, 0.5);
+  /* -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--primary-color); */
+}
+
+.gambarFlyer{
+ max-width: 700px;
+ border-radius: 5%;
+ margin-bottom: 25px;
+}
+
+.aboutWeb{
+  background-color: var(--primary-color);
+  padding: 30px 55px;
+  border: 10px solid var(--white-color);
+  border-radius: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 90px;
+}
+
+.shortDesc{
+  text-align: center;
+  font-size: 28px;
+  font-family: 'JudsonBold';
+}
+
+.button{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-family: 'JudsonBold';
+  font-size: 25px;
+}
+
+.button:hover{
+  background-color: var(--text-color);
+  color: var(--white-color);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* JUDUL PART */
+.t4Label{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: var(--text-color);
+}
+
+.garis{
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 5px;
+}
+
+.partJdl{
+  background-color: var(--white-color);
+  width: max-content;
+  font-family: 'JudsonBold';
+  font-size: 35px;
+  margin: 0px auto;
+  padding: 5px 8px;
+}
+
+/* BENEFIT */
+.containerbenefit{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+/* PEMATERI PART */
+.part{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.t4InfoPemateri{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .pemateripart{
+  background-color: var(--secondary-color);
+} */
+
+.cardcon{
+  margin: 40px auto;
+  display: flex;
+  gap: 50px;
+}
+
+/* INFO TAMBAHAN */
+.t4info{
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 160px;
+}
+
+.t4detInfo{
+  text-align: center;
+  margin-top: 5px;
+}
+
+.t4detInfo h2 {
+  color: var(--primary-color);
+  font-family: 'JudsonBold';
+  font-size: 28px;
+}
+
+.t4detInfo h4{
+  font-family: "JudsonReg";
+  font-size: 18px;
+}
+
+.icon{
+  width: 45px;
+  height: 45px;
+  color: var(--primary-color);
+}
+
+.t4formDaftar{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: 9px solid var(--white-color);
+}
+
+.t4formDaftar .t4logo {
+  border: 3px solid var(--text-color);
+}
+
+.formDaftar{
+  display: flex;
+  flex-direction: column;
+}
+
+.formDaftar input{
+  border-radius: 5px;
+  height: 25px;
+  padding: 5px 8px;
+  border: none;
+}
+
+.formDaftar label{
+  font-family: 'JudsonBold';
+  font-size: 22px;
+  margin: 7px 0px;
+  color: var(--white-color);
+}
+
+.dropdown{
+  height: 40px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+.formDaftar .button {
+  max-width: max-content;
+}
+
+/* FOOTER */
+.bgfooter {
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+
+.t4footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin-top: 45px;
+}
+
+
+
+
+/* buat benefit yg custom*/
+.agcourses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+
+  margin: 0 15px 30px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+.agcoursesitem_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: var(--secondary-color);
+
+  overflow: hidden;
+
+  position: relative;
+}
+.agcoursesitem_link:hover,
+.agcoursesitem_link:hover .agcoursesitem_date {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.agcoursesitem_link:hover .agcoursesitem_bg {
+  -webkit-transform: scale(20);
+  -ms-transform: scale(20);
+  transform: scale(20);
+}
+.agcoursesitem_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--text-color);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.agcoursesitem_datebox {
+  font-size: 18px;
+  color: var(--text-color);
+
+  z-index: 2;
+  position: relative;
+}
+.agcoursesitem_date {
+  font-weight: bold;
+  color: var(--primary-color);
+
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease
+}
+.agcoursesitem_bg {
+  height: 128px;
+  width: 128px;
+  background-color: var(--primary-color);
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.agcourses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: #3ecd5e;
+}
+.agcourses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: #e44002;
+}
+.agcourses_item:nth-child(4n) .ag-courses-item_bg {
+  background-color: #952aff;
+}
+.agcourses_item:nth-child(5n) .ag-courses-item_bg {
+  background-color: #cd3e94;
+}
+.agcourses_item:nth-child(6n) .ag-courses-item_bg {
+  background-color: #4c49ea;
+}
+
+
+
+@media only screen and (max-width: 979px) {
+  .agcourses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .agcoursesitem_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .agformatcontainer {
+    width: 96%;
+  }
+
+}
+@media only screen and (max-width: 639px) {
+  .agcourses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .agcourses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .agcourses-item_link {
+    padding: 22px 40px;
+  }
+  .agcoursesitem_datebox {
+    font-size: 16px;
+  }
+}
+
+/* buat profile materi custom */
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.img_bx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translateY(30px) scale(0.5);
+  transform-origin: top;
+  margin-bottom: 10px;
+}
+
+.img_bx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+}
+
+.content .detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.content .detail h2 {
+  color: var(--text-color);
+  font-size: 1.6em;
+  font-weight: bolder;
+  
+}
+
+.content .detail h2 span {
+  font-size: 0.7em;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.kataPemateri{
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.kataPemateri img{
+  width: 400px;
+  border-radius: 20px;
+}
+
+.sci {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+.sci .li {
+  list-style: none;
+  margin: 4px;
+}
+
+.sci .icon{
+  width: 25px;
+}
+
+.sci .li a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.5em;
+  color: #444;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: 0.5s;
+}
+
+.sci .li a:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .t4logo{
+    font-size: 16px;
+  }
+
+  .jdlWebinar{
+    font-size: 30px;
+  }
+
+  .gambarFlyer{
+    width: 300px;
+  }
+
+  .aboutWeb{
+    margin: 0px 40px;
+  }
+
+  .containerbenefit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .t4info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer .t4detInfo{
+    margin-top: -30px;
+  }
+
+  .cardcon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .kataPemateri{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+
+}
