@@ -18,6 +18,7 @@ import logoberdayaberjaya from '../gambar/berdayaberjayalogo.png';
 import logo3 from '../gambar/3logo.png';
 import { supabase } from '../utils';
 import { useNavigate } from 'react-router-dom';
+import DisplayDescription from './components/DisplayDescription';
 
 function LandingPage() {
     const navigate = useNavigate();
@@ -103,7 +104,7 @@ function LandingPage() {
                         </div>
                         <div className={styles.aboutWeb}>
                             <div className={styles.shortDesc}>
-                                {webinar.deskripsi_singkat}
+                                <DisplayDescription description={webinar.deskripsi_singkat}/>
                             </div>
                             <div onClick={handleScrollToDiv} className={styles.button}>
                                 Daftar Sekarang!
@@ -166,8 +167,8 @@ function LandingPage() {
                             
                         </div> */}
 
+                        <div className={styles.cardcon}>
                         {webinar.nama_pemateri.map((name, index) => (
-                                <div className={styles.cardcon}>
                                 <div key={index} className={styles.card}>
                                     <div className={styles.img_bx}>
                                     <img src={webinar.foto_pemateri_url[index]} alt={name} />    
@@ -179,14 +180,14 @@ function LandingPage() {
                                         </div>
                                     </div>
                                 </div>
-                                </div>
                             ))}
+                        </div>
 
-                        {webinar.nama_pemateri.map((name,index) => (
-                            <div className={styles.kataPemateri}>
-                                <img src={webinar.quote_pemateri_url[index]} alt="img" />
-                            </div>
-                        ))}
+                        <div className={styles.cardcon}>
+                            {webinar.nama_pemateri.map((name,index) => (
+                                    <img className={styles.katapemateri} src={webinar.quote_pemateri_url[index]} alt="img" />
+                            ))}
+                        </div>
 
                         {/* <div className={styles.kataPemateri}>
                             <img src={katapemateri1} alt="img" />
