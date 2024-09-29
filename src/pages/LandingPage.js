@@ -273,14 +273,14 @@ function LandingPage() {
                         <option value="online">Online</option>
                     </select>
 
-                    <label htmlFor="investasi">Jumlah Investasi:</label>
+                    <label htmlFor="investasi">Jumlah Donasi:</label>
                     <select 
                         value={investment} 
                         onChange={(e) => setInvestment(e.target.value)} 
                         className={styles.dropdown}
                         required
                     >
-                        <option value="">Pilih Jumlah Investasi</option>
+                        <option value="">Pilih Jumlah Donasi</option>
                         <option value="25000">25.000</option>
                         <option value="50000">50.000</option>
                         <option value="75000">75.000</option>
