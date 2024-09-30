@@ -316,7 +316,7 @@ function LandingPage() {
 
                         <div className={styles.t4detInfo}>
                             <img src={iconFB} className={styles.icon}/>
-                            <h4>Bersatu Bersama</h4>
+                            <h4>Berdaya Berjaya</h4>
                         </div>
                         <div className={styles.t4detInfo}>
                             <img src={iconYT} className={styles.icon}/>
