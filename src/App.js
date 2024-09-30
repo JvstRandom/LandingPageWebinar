@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.svg'
 import './App.css';
 import LandingPage from './pages/LandingPage';
 import AfterRegis from './pages/AfterRegis';
