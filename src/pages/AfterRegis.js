@@ -47,11 +47,11 @@ function AfterRegis() {
     <div className={styles.container}>
       <div className={styles.cont}>
         <h2>ANDA SUDAH BERHASIL MENDAFTAR</h2>
-        <h4>Untuk tahap berikutnya, Anda dapat mentransfer melalui QRIS di bawah ini:</h4>
-        <img src={qris} className={styles.gambarQris} alt='gambarQris'/>
-        {/* <h4>Untuk Alternatif lain, anda dapat mentransfer melalui:</h4>
-        <h4>BCA:</h4>
-        <h4>Mandiri:</h4> */}
+        <h4>Untuk tahap berikutnya, Anda dapat mentransfer ke rekening BCA di bawah ini:</h4>
+        {/* <img src={qris} className={styles.gambarQris} alt='gambarQris'/> */}
+        {/* <h4>Untuk Alternatif lain, anda dapat mentransfer melalui:</h4> */}
+        <h4> Rekening BCA: 3841354123 (atas nama: Dini Fitri Sari)</h4>
+        {/* <h4>Mandiri:</h4> */}
         <div className={styles.button} onClick={handleClick}>
           Konfirmasi disini!
         </div>
