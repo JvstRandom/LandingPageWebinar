@@ -75,7 +75,7 @@ function LandingPage() {
         if (error) {
             console.error('Error submitting registration:', error);
         } else {
-            navigate('/after-regis');
+            navigate(`/after-regis/${webinar.id}`);
         }
     };
 
@@ -84,7 +84,9 @@ function LandingPage() {
     };
 
     if (loading) {
-        return <div>Loading webinar details...</div>;
+        return <div>
+            loading
+        </div>
     }
 
     return (
@@ -261,7 +263,7 @@ function LandingPage() {
                         required
                     />
 
-                    <label htmlFor="offlineOnline">Pilihan :</label>
+                    <label htmlFor="offlineOnline">Pilihan Offline atau Online :</label>
                     <select
                         value={offlineOnline}
                         onChange={(e) => setOfflineOnline(e.target.value)}
@@ -273,14 +275,14 @@ function LandingPage() {
                         <option value="online">Online</option>
                     </select>
 
-                    <label htmlFor="investasi">Jumlah Donasi:</label>
+                    <label htmlFor="investasi">Jumlah Kontribusi:</label>
                     <select 
                         value={investment} 
                         onChange={(e) => setInvestment(e.target.value)} 
                         className={styles.dropdown}
                         required
                     >
-                        <option value="">Pilih Jumlah Donasi</option>
+                        <option value="">Pilih Jumlah Kontribusi</option>
                         <option value="25000">25.000</option>
                         <option value="50000">50.000</option>
                         <option value="75000">75.000</option>
