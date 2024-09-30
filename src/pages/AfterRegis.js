@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';  // Import useParams
 import { supabase } from '../utils';
-import contohgmbr from './contoh.jpg';
-import qris from '../gambar/qris.jpg'
 import styles from './AfterRegis.module.css';
 
 function AfterRegis() {
@@ -41,6 +39,17 @@ function AfterRegis() {
     window.open(whatsappLink, '_blank');
   };
 
+  // Function to copy text to clipboard
+  const handleCopy = (text) => {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        alert('Rekening berhasil disalin ke clipboard!');
+      })
+      .catch((err) => {
+        console.error('Error copying to clipboard: ', err);
+      });
+  };
+
   if (loading) return <p>Loading...</p>;
 
   return (
@@ -48,10 +57,16 @@ function AfterRegis() {
       <div className={styles.cont}>
         <h2>ANDA SUDAH BERHASIL MENDAFTAR</h2>
         <h4>Untuk tahap berikutnya, Anda dapat mentransfer ke rekening BCA di bawah ini:</h4>
-        {/* <img src={qris} className={styles.gambarQris} alt='gambarQris'/> */}
-        {/* <h4>Untuk Alternatif lain, anda dapat mentransfer melalui:</h4> */}
         <h4> Rekening BCA: 3841354123 (atas nama: Dini Fitri Sari)</h4>
-        {/* <h4>Mandiri:</h4> */}
+        
+        {/* Copy button to copy bank account number */}
+        <div 
+          className={styles.copyButton} 
+          onClick={() => handleCopy('3841354123')}
+        >
+          Salin Rekening
+        </div>
+
         <div className={styles.button} onClick={handleClick}>
           Konfirmasi disini!
         </div>
