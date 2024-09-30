@@ -4,7 +4,7 @@ import styles from './GantiWebinar.module.css';
 import { useNavigate } from 'react-router-dom';
 
 function GantiWebinar() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     title: '',
@@ -163,8 +163,7 @@ function GantiWebinar() {
 
             <div className={styles.part}>
               <label>Date:</label>
-              <input
-                type="text"
+              <textarea
                 name="date"
                 value={formData.date}
                 onChange={handleChange}
@@ -175,8 +174,7 @@ function GantiWebinar() {
 
             <div className={styles.part}>
               <label>Place:</label>
-              <input
-                type="text"
+              <textarea
                 name="place"
                 value={formData.place}
                 onChange={handleChange}

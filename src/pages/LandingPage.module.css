@@ -234,6 +234,13 @@
   max-width: max-content;
 }
 
+.containercomingsoon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* FOOTER */
 .bgfooter {
   background-color: var(--secondary-color);
@@ -569,12 +576,21 @@
     align-items: center;
   }
 
-  .kataPemateri{
+  .katapemateri{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    }
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .containercomingsoon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
 }
 

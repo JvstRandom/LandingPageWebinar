@@ -10,10 +10,7 @@ import iconPhone from '../icons/phone_solid.svg';
 import iconMail from '../icons/envelope_solid.svg';
 import iconFB from '../icons/facebookfbrandssolid.svg';
 import iconYT from '../icons/youtubebrandssolid.svg';
-import pemateri1 from './pemateri1.jpg';
-import pemateri2 from './pemateri2.jpg';
-import katapemateri1 from './katapemateri1.jpg';
-import katapemateri2 from './katapemateri2.jpg';
+import comingsoon from '../gambar/comingsoon.jpg'
 import logoberdayaberjaya from '../gambar/berdayaberjayalogo.png';
 import logo3 from '../gambar/3logo.png';
 import { supabase } from '../utils';
@@ -211,19 +208,19 @@ function LandingPage() {
                             <div className={styles.t4detInfo}>
                                 <img src={iconJam} className={styles.icon} />
                                 <h2>Waktu</h2>
-                                <h4>{webinar.waktu}</h4>
+                                <h4><DisplayDescription description={webinar.waktu}/></h4>
                             </div>
 
                             <div className={styles.t4detInfo}>
                                 <img src={iconLoc} className={styles.icon} />
                                 <h2>Tempat</h2>
-                                <h4>{webinar.tempat}</h4>
+                                <h4><DisplayDescription description={webinar.tempat}/></h4>
                             </div>
 
                             <div className={styles.t4detInfo}>
                                 <img src={iconInfo} className={styles.icon} />
                                 <h2>Info Tambahan</h2>
-                                <h4>{webinar.info_tambahan}</h4>
+                                <h4><DisplayDescription description={webinar.info_tambahan}/></h4>
                             </div>
                         </div>
                     </div>
@@ -292,6 +289,22 @@ function LandingPage() {
                     <button className={styles.button} type="submit">Daftar</button>
                 </form>
             </div>
+
+            {/* COMING SOON PART */}
+            <div className={styles.part}>
+                        <div className={styles.t4Label}>
+                            <div className={styles.garis}>
+                                <div className={styles.partJdl}>
+                                    COMING SOON
+                                </div>
+                            </div>
+                        </div>
+                        <div className={styles.containercomingsoon}>
+                            <div>
+                                <img src={comingsoon} className={styles.gambarFlyer}/>
+                            </div>
+                        </div>
+                    </div>
 
              {/* FOOTER */}
             <div className={styles.bgfooter}>
