@@ -10,7 +10,7 @@ import iconPhone from '../icons/phone_solid.svg';
 import iconMail from '../icons/envelope_solid.svg';
 import iconFB from '../icons/facebookfbrandssolid.svg';
 import iconYT from '../icons/youtubebrandssolid.svg';
-import comingsoon from '../gambar/comingsoon.jpg'
+import comingsoon from '../gambar/comingsoon2.jpg'
 import logoberdayaberjaya from '../gambar/berdayaberjayalogo.png';
 import logo3 from '../gambar/3logo.png';
 import { supabase } from '../utils';

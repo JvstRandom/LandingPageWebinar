@@ -35,7 +35,7 @@ function AfterRegis() {
   const message = `Hi, saya mau konfirmasi pendaftaran di acara ${webinarName}.`;
   const encodedMessage = encodeURIComponent(message);
   const phoneNumber = '0818524862';
-  const whatsappLink = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
+  const whatsappLink = `https://whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
 
   const handleClick = () => {
     window.open(whatsappLink, '_blank');
