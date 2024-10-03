@@ -9,6 +9,10 @@ import { CSVLink } from 'react-csv';
 function AdminDashboard() {
   const navigate = useNavigate();
 
+  // Modal state
+  const [showModal, setShowModal] = useState(false);
+  const [participantToDelete, setParticipantToDelete] = useState(null);
+
   // States for participants, webinars, and other controls
   const [participants, setParticipants] = useState([]);
   const [webinars, setWebinars] = useState([]);
@@ -28,7 +32,6 @@ function AdminDashboard() {
     if (error) {
       console.error('Error fetching participants:', error);
     } else {
-      console.log('Fetched Participants:', data); // Log the fetched participants data
       setParticipants(data);
     }
   };
@@ -62,13 +65,21 @@ function AdminDashboard() {
     }
   };
 
-  // Handle Delete row
-  const deleteRow = async (id) => {
-    const { error } = await supabase.from('participants').delete().eq('id', id);
+  // Open delete confirmation modal
+  const confirmDelete = (id) => {
+    setParticipantToDelete(id);
+    setShowModal(true); // Show the confirmation modal
+  };
+
+  // Handle Delete row after confirming
+  const deleteRow = async () => {
+    const { error } = await supabase.from('participants').delete().eq('id', participantToDelete);
     if (error) {
       console.error('Error deleting participant:', error);
     } else {
       fetchParticipants(); // Refresh participants after deletion
+      setShowModal(false); // Close the modal
+      setParticipantToDelete(null); // Reset the participant to delete
     }
   };
 
@@ -106,8 +117,6 @@ function AdminDashboard() {
   ];
 
   const fileName = `participants_${selectedWebinar || 'all'}_webinars.csv`;
-  
-  
 
   return (
     <div className={styles.container}>
@@ -117,6 +126,19 @@ function AdminDashboard() {
                 Ganti Webinar
             </div>  
         </div>
+
+        {/* Confirmation Modal */}
+        {showModal && (
+              <div className={styles.modal}>
+                <div className={styles.modalContent}>
+                  <h3>Are you sure you want to delete this participant?</h3>
+                  <div className={styles.modalButtons}>
+                    <button onClick={deleteRow} className={styles.confirmBtn}>Yes</button>
+                    <button onClick={() => setShowModal(false)} className={styles.cancelBtn}>No</button>
+                  </div>
+                </div>
+              </div>
+            )}
 
         <div className={styles.TableCont}>
               {/* Controls at the top of the table */}
@@ -152,13 +174,6 @@ function AdminDashboard() {
 
                 {/* CSV Download Button */}
                 <div>
-                  {/* <CSVLink
-                    data={data}
-                    filename={`webinar_table_${new Date().toISOString()}.csv`}
-                    className="btn"
-                  >
-                    Download CSV
-                  </CSVLink> */}
                   <button className={styles.tombol}>
                     <CSVLink
                       data={csvData}
@@ -180,6 +195,7 @@ function AdminDashboard() {
                     <th>Asal Sekolah</th>
                     <th>No HP</th>
                     <th>Offline/Online</th>
+                    <th>Jumlah Donasi</th>
                     <th>Payment Status</th>
                     <th>Delete</th>
                   </tr>
@@ -192,6 +208,7 @@ function AdminDashboard() {
                     <td>{row.asal_instansi}</td>
                     <td>{row.no_hp}</td>
                     <td>{row.offlineonline}</td>
+                    <td>{row.investment_amount}</td>
                     <td>
                       <button 
                         className={row.payment_status ? styles.paid : styles.unpaid}
@@ -201,7 +218,7 @@ function AdminDashboard() {
                     </td>
                     <td>
                       <button 
-                        onClick={() => deleteRow(row.id)}>Delete</button>
+                        onClick={() => confirmDelete(row.id)}>Delete</button>
                     </td>
                   </tr>
                 ))}
@@ -218,7 +235,8 @@ function AdminDashboard() {
                 activeClassName={styles.active}
               />
             </div>
-  
+
+            
     </div>
   )
 }
